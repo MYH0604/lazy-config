@@ -1,2 +1,24 @@
+-- -- Set Python interpreter
+-- vim.g.python3_host_prog = "~/.venv/nvim/bin/python"
+-- local function askGrimoire(question)
+--   -- Escape single quotes in the question to avoid breaking the shell command
+--   local escaped_question = question:gsub("'", "\\'")
+--
+--   -- Construct the command with proper escaping
+--   local cmd = "openai api completions.create -m gpt-3.5-turbo --prompt '" .. escaped_question .. "'"
+--
+--   -- Execute the command and capture the output
+--   local handle = io.popen(cmd)
+--   local result = handle:read("*a") -- Read all output
+--   handle:close()
+--
+--   -- Print the result to NeoVim command line
+--   print(result)
+-- end
+--
+-- vim.api.nvim_create_user_command("Grimoire", function(opts)
+--   askGrimoire(opts.args)
+-- end, { nargs = 1, desc = "Ask Grimoire a coding question" })
+--
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
