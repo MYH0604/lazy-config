@@ -8,6 +8,12 @@ vim.cmd([[
     autocmd BufRead,BufNewFile *.ejs set filetype=html
   augroup END
 ]])
+vim.cmd([[
+  augroup hbs
+    autocmd!
+    autocmd BufRead,BufNewFile *.hbs set filetype=html
+  augroup END
+]])
 local opt = vim.opt
 -- vim.opt.wrap = true
 opt.linebreak = true
